@@ -16,20 +16,21 @@
 
 <form method="post" use:enhance>
   <input type="hidden" name="pos" value={pos} />
-  <Button
-    variant="outlined"
-    type="submit"
-    class="mdc-button"
-    on:mouseover={() => ($mouseOver = true)}
-    on:mouseout={() => ($mouseOver = false)}
-    style="height: 3.6rem; border-radius: 0"
-  >
-    <span
-      style="font-weight: {$isPlaceholder
-        ? 'normal'
-        : 'bold'}; opacity: {$isPlaceholder ? 0.3 : 1}"
+  <div class="square">
+    <Button
+      variant="outlined"
+      type="submit"
+      class="mdc-button"
+      on:mouseover={() => ($mouseOver = true)}
+      on:mouseout={() => ($mouseOver = false)}
+      style="height: 3.6rem; border-radius: 0"
     >
-      {$isPlaceholder ? turn : value}
-    </span>
-  </Button>
+      <span
+        style:font-weight={$isPlaceholder ? "normal" : "bold"}
+        style:opacity={$isPlaceholder ? 0.3 : 1}
+      >
+        {$isPlaceholder ? turn : value}
+      </span>
+    </Button>
+  </div>
 </form>

@@ -7,8 +7,17 @@
 
 <Board {data} />
 
-<div style="margin-top: 1rem">
-  <a href="/" style="text-decoration: none">
+<div class="wrong-game">
+  <a href="/">
     <Button variant="outlined">Wrong game?</Button>
   </a>
 </div>
+
+<style>
+  .wrong-game {
+    margin-top: 1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>

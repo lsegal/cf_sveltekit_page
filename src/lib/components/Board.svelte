@@ -24,10 +24,10 @@
 {:else}
   <div>Turn: <strong>{data.turn}</strong></div>
 {/if}
-<div style="height: 1rem" />
+<div style:height="1rem" />
 
 {#each Array(slen) as _, row}
-  <div style="display: flex">
+  <div style:display="flex">
     {#each Array(slen) as _, col}
       <Square
         turn={data.turn}
